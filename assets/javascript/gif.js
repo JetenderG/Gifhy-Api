@@ -48,67 +48,53 @@ function gifWork() {
 
             displaytext.html(response.data[i].rating);
 
-            gif.attr("src", response.data[i].images.fixed_height_still.url)
+            //   gif.attr("src", response.data[i].images.fixed_height_still.url)
 
+            gif.attr({
 
+                "data-state": "still",
+                "src": response.data[i].images.fixed_height_still.url,
+                "data-animate": response.data[i].images.fixed_height.url,
+                "data-still": response.data[i].images.fixed_height_still.url,
+
+            });
 
             display.append(displaytext, gif)
 
         }
-        return gif;
     });
 }
 
 $(document).on("click", ".gifimage", function () {
-    console.log("hi");
-
-    $(this).attr({
-
-        "data-state": "still",
-        "data-still": "",
-        "data-animate": "response.data[i].images.fixed_height.ur",
-
-    });
-
-    $(this).attr()
 
 
-    if (state === "still") {
-        var value = $(this).attr("data-animate");
-        $(this).attr("src", value);
-        // $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
-    } else if (state === "animate") {
-        // else {
-
-        var value = $(this).attr("data-still");
-        $(this).attr("src", value);
-        $(this).attr("data-state", "still");
-    }
 
 
-    var gifStill = $(this).attr("fixed_height_still", url);
+    var imageSelect = $(this);
 
-    var gifAnimate = $(this).attr("fixed_height", url);
 
-    var clicked = $(this).attr("data-state");
 
-    if (clicked === "state") {
 
+
+    var clicked = imageSelect.attr("data-state");
+
+
+    if (clicked == "still") {
+
+        var gifAnimate = $(this).attr("data-animate");
 
         $(this).attr("data-state", "animate");
 
-        state.attr("src", "fixed_height", "url");
+        $(this).attr("src", $(this).attr(gifAnimate));
+    } else if (clicked == "animate") {
+        var gifStill = $(this).attr("data-still");
 
-    } else if (clicked === "animate") {
-
-        state.attr("src", $(this).attr("fixed_height_still", "url"))
+        $(this).attr("src", $(this).attr(gifStill));
 
         $(this).attr("data-state", "still");
 
 
     }
-
 
 
 
