@@ -48,12 +48,10 @@ function gifWork() {
 
             displaytext.html(response.data[i].rating);
 
-            //   gif.attr("src", response.data[i].images.fixed_height_still.url)
+            gif.attr("src", response.data[i].images.fixed_height_still.url)
 
             gif.attr({
-
                 "data-state": "still",
-                "src": response.data[i].images.fixed_height_still.url,
                 "data-animate": response.data[i].images.fixed_height.url,
                 "data-still": response.data[i].images.fixed_height_still.url,
 
@@ -79,17 +77,17 @@ $(document).on("click", ".gifimage", function () {
     var clicked = imageSelect.attr("data-state");
 
 
-    if (clicked == "still") {
+    if (clicked === "still") {
 
         var gifAnimate = $(this).attr("data-animate");
 
         $(this).attr("data-state", "animate");
 
-        $(this).attr("src", $(this).attr(gifAnimate));
-    } else if (clicked == "animate") {
+        $(this).attr("src", gifAnimate);
+    } else if (clicked === "animate") {
         var gifStill = $(this).attr("data-still");
 
-        $(this).attr("src", $(this).attr(gifStill));
+        $(this).attr("src", gifAnimate);
 
         $(this).attr("data-state", "still");
 
