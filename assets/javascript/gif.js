@@ -38,9 +38,9 @@ function gifWork() {
 
 
         for (var i = 0; i < response.data.length; i++) {
-            var displaytext = $("<p>");
+            var displaytext = $("<p>").addClass("rate");
 
-            var gif = $("<img>").addClass("gifimage");
+            var gif = $("<img>").attr("class", "gifimage");
 
             var display = $("#moviedisplay");
 
@@ -87,7 +87,7 @@ $(document).on("click", ".gifimage", function () {
     } else if (clicked === "animate") {
         var gifStill = $(this).attr("data-still");
 
-        $(this).attr("src", gifAnimate);
+        $(this).attr("src", gifStill);
 
         $(this).attr("data-state", "still");
 
