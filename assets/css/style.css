@@ -6,9 +6,14 @@
 
 
 .gifimage {
-
-
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: auto;
     float: left;
+}
+
+.gifDiv{
+    height: auto;
+    float: left;
+    margin: 5px;
+    width: auto;
 }

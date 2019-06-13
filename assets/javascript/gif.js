@@ -23,6 +23,7 @@ function buttonDisplay() {
 
 
 function gifWork() {
+    $("#moviedisplay").empty();
 
 
     var buttondata = $(this).attr("data-name");
@@ -38,6 +39,9 @@ function gifWork() {
 
 
         for (var i = 0; i < response.data.length; i++) {
+
+            var divgifyBox = $("<div>").addClass("gifDiv");
+
             var displaytext = $("<p>").addClass("rate");
 
             var gif = $("<img>").attr("class", "gifimage");
@@ -46,7 +50,7 @@ function gifWork() {
 
             var containerGT = $("<div>");
 
-            displaytext.html(response.data[i].rating);
+            displaytext.html("Rating : " + response.data[i].rating);
 
             gif.attr("src", response.data[i].images.fixed_height_still.url)
 
@@ -57,14 +61,15 @@ function gifWork() {
 
             });
 
-            display.append(displaytext, gif)
+            divgifyBox.append(displaytext, gif)
+
+            display.append(divgifyBox);
 
         }
     });
 }
 
 $(document).on("click", ".gifimage", function () {
-
 
 
 
