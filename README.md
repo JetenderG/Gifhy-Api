@@ -8,7 +8,7 @@ A app that allows the user to gather gifs from an api using the buttons. The gif
 
 Link to the [Site](https://jetenderg.github.io/Gifhy-Api/)
 
-![Page](1560908446995.png)
+![Page](assets/images/1560908446995.png)
 
 Installation
 ----
