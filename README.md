@@ -6,6 +6,9 @@ Description
 
 A app that allows the user to gather gifs from an api using the buttons. The gif runs by the user clicking on the still image. Lastly a user can search for gifs by the text bar at the side.
 
+Link to the [Site](https://jetenderg.github.io/Gifhy-Api/)
+
+![Page](1560908446995.png)
 
 Installation
 ----
