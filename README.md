@@ -14,14 +14,12 @@ Installation
 ----
 *Clone Repository*
 
-> git clone =
-
-> https://github.com/JetenderG/Gifhy-Api.git
+> git clone  https://github.com/JetenderG/Gifhy-Api.git
 
 
 Built With
 ---
-- [Bootsrap](https://getbootstrap.com/) CSS FrameWork
+- [Bootstrap](https://getbootstrap.com/) CSS FrameWork
 - [Jquery](https://jquery.com/) Javascript Library
 - [Giphy](https://developers.giphy.com/) Gifhy Api
 
